@@ -1,6 +1,6 @@
 <div dir="rtl">
 
-# Design Fundamental HTML, CSS, JavaScript
+# Design Fundamental (HTML-CSS-JavaScript)
 این مخزن شامل سرفصل‌ها و تمرین‌های آموزشی (به‌صورت پوشه‌بندی‌شده) برای یادگیری **مبانی HTML و طراحی ساختار صفحات وب** است. محتوای هر جلسه/فصل داخل پوشه‌ی مربوط به همان عنوان قرار دارد. 
 
 ---
