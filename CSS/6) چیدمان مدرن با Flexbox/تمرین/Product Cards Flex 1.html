@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards Flex</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: 'Vazir FD-WOL';
+            background-color: #f5f6f8;
+            direction: rtl;
+
+        }
+
+        fieldset {
+            border: 1px solid #CCA383;
+            background: rgba(192, 192, 192, 0.205);
+        }
+
+        fieldset legend {
+            background: #CCA383;
+            padding: 6px;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+
+        /* کانتینر */
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* کارت محصول */
+        .product-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            flex: 0 0 320px;
+            /* ⭐ عرض ثابت، بدون کش‌آمدن */
+            height: 140px;
+
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+        }
+
+        .product-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #eee;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: right;
+            width: 100%;
+        }
+
+        .info h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #222;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .price {
+            margin-top: 6px;
+            font-weight: bold;
+            color: #0a7cff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>محصولات جدید</legend>
+        <div class="card">
+
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+            <div class="product-card">
+                <div class="info">
+                    <h3>گوشی موبایل</h3>
+                    <p>حافظه ۱۲۸ گیگ</p>
+                    <span class="price">۱۲٬۵۰۰٬۰۰۰ تومان</span>
+                </div>
+                <img src="https://dkstatics-public.digikala.com/digikala-products/112066961.jpg">
+            </div>
+
+        </div>
+    </fieldset>
+
+</body>
+
+</html>
