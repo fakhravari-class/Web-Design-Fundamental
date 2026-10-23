@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فرم ثبت‌نام</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+      body {
+        background: #f2f4f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .form-container {
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 420px;
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+      .form-group {
+        margin-bottom: 18px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #555;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccd0d5;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-group input:focus {
+        border-color: #1877f2;
+        box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #1877f2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 10px;
+      }
+      .submit-btn:hover {
+        background: #145dbf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>فرم ثبت‌نام</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">نام و نام خانوادگی</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            maxlength="80"
+            minlength="5"
+            autocomplete="name"
+            placeholder="نام و نام خانوادگی"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">ایمیل</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">شماره موبایل</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="09xxxxxxxxx"
+            pattern="09[0-9]{9}"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">رمز عبور</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="new-password"
+            placeholder="رمز عبور"
+            minlength="6"
+            required
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">ثبت‌نام</button>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll("form input");
+
+        const messages = {
+          name: {
+            valueMissing: "لطفاً نام و نام خانوادگی خود را وارد کنید.",
+            tooShort: "نام باید حداقل ۵ کاراکتر باشد.",
+            tooLong: "نام نباید بیشتر از ۸۰ کاراکتر باشد.",
+          },
+          email: {
+            valueMissing: "لطفاً ایمیل خود را وارد کنید.",
+            typeMismatch: "فرمت ایمیل صحیح نیست.",
+          },
+          phone: {
+            valueMissing: "لطفاً شماره موبایل را وارد کنید.",
+            patternMismatch: "شماره موبایل باید با ۰۹ شروع شده و ۱۱ رقم باشد.",
+          },
+          password: {
+            valueMissing: "لطفاً رمز عبور را وارد کنید.",
+            tooShort: "رمز عبور باید حداقل ۶ کاراکتر باشد.",
+          },
+        };
+
+        function updateMessage(input) {
+          input.setCustomValidity("");
+
+          const v = input.validity;
+          const m = messages[input.name] || {};
+
+          if (v.valueMissing && m.valueMissing) {
+            input.setCustomValidity(m.valueMissing);
+          } else if (v.tooShort && m.tooShort) {
+            input.setCustomValidity(m.tooShort);
+          } else if (v.tooLong && m.tooLong) {
+            input.setCustomValidity(m.tooLong);
+          } else if (v.typeMismatch && m.typeMismatch) {
+            input.setCustomValidity(m.typeMismatch);
+          } else if (v.patternMismatch && m.patternMismatch) {
+            input.setCustomValidity(m.patternMismatch);
+          }
+        }
+
+        inputs.forEach((input) => {
+          input.addEventListener("input", () => updateMessage(input));
+          input.addEventListener("invalid", () => updateMessage(input));
+        });
+      });
+    </script>
+  </body>
+</html>
